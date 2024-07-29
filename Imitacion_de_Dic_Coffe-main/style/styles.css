@@ -111,8 +111,8 @@ a {
 }
 
 .menu_item {
-    background: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ 
+   
     border-radius: 8px;
     overflow: hidden;
     width: 45%;
@@ -123,22 +123,18 @@ a {
     text-align: center;
 }
 
-.menu_item_content {
-    padding: 15px;
-}
+
 
 .menu_item_content h4 {
     margin: 0 0 10px;
     font-size: 1.25rem;
-}
-
-.menu_item_content p {
-    margin: 0 0 5px;
+    margin-bottom: 14px;
 }
 
 .menu_item_image {
     width: 100%;
     height: auto;
+    border-radius: 8px; /* Esto es para otras imágenes que no son redondas */
 }
 
 .container_concept {
@@ -155,6 +151,7 @@ a {
 .concept_image {
     width: 35%;
     border-radius: 8px;
+    padding-bottom: 15px;
 }
 
 .access_section .access_info {
@@ -203,4 +200,18 @@ a {
 .copywrite {
     text-align: center;
     margin-top: 10px;
+}
+
+.coffee_image_wrapper {
+    margin: 8px 15px, 15px;
+    display: flex;
+    justify-content: center; /* Centrar la imagen dentro del contenedor si es necesario */
+}
+
+.coffee_menu_image {
+    width: 100px; /* Ajusta según el tamaño deseado */
+    height: 100px; /* Asegúrate de que el contenedor sea cuadrado */
+    border-radius: 50%;
+    object-fit: cover; /* Asegura que la imagen se recorte correctamente si es necesario */
+    display: block;
 }
