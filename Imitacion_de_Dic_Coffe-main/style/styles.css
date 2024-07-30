@@ -28,7 +28,7 @@ a {
     height: 60px;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: fixed; /* Modificado para que el menú quede fijo */
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -111,19 +111,16 @@ a {
 }
 
 .menu_item {
- 
-   
     border-radius: 8px;
     overflow: hidden;
-    width: 45%;
+    width: 49%; /* Modificado para cumplir con el requisito */
     max-width: 450px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin: 20px 0; /* Modificado para cumplir con el requisito */
 }
-
-
 
 .menu_item_content h4 {
     margin: 0 0 10px;
@@ -132,7 +129,7 @@ a {
 }
 
 .menu_item_image {
-    width: 100%;
+    width: 55%; /* Modificado para cumplir con el requisito */
     height: auto;
     border-radius: 8px; /* Esto es para otras imágenes que no son redondas */
 }
@@ -166,6 +163,10 @@ a {
 
 .access_info dt, .access_info dd {
     margin: 0;
+}
+
+.access_info dt {
+    width: 80px; /* Modificado para cumplir con el requisito */
 }
 
 .access_info dd {
@@ -209,9 +210,17 @@ a {
 }
 
 .coffee_menu_image {
-    width: 100px; /* Ajusta según el tamaño deseado */
-    height: 100px; /* Asegúrate de que el contenedor sea cuadrado */
+    width: 20%; /* Modificado para cumplir con el requisito */
     border-radius: 50%;
     object-fit: cover; /* Asegura que la imagen se recorte correctamente si es necesario */
     display: block;
+}
+
+.menu_item_content {
+    width: 80%; /* Modificado para cumplir con el requisito */
+}
+
+/* Fondo de la sección de menú */
+.article_menu_image {
+    background: center / cover url('../images/sample_menu_bg.jpg') no-repeat fixed;
 }
