@@ -1,13 +1,13 @@
-
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DIC cafe</title>
+    <title>DIC Cafe</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/sale.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
+  
     <section class="section_inner">
       <div class="section_title">
         <h1>Coffee Bean Sales</h1>
@@ -51,28 +51,29 @@
       <h2>Shipping charges</h2>
       <ul>
         <li>500 yen for shipping charges for amounts less than 2,000 yen</li>
-        <li>250 yen over 2000 yen</li>
+        <li>250 yen for amounts of 2,000 yen or more</li>
         <li>Free of charge for orders over 3,000 yen</li>
       </ul>
     </section>
 
     <section class="section_inner">
       <h2>Order</h2>
-      <form>
+      <form id="orderForm">
         <p>Please select a product</p>
         <div>
           <select id="product" required>
             <option hidden value="0">Please select</option>
-            <option value="500">Original blend 200g 500yen</option>
-            <option value="900">Original blend 500g 900yen</option>
-            <option value="700">Special Blend 200g 700yen</option>
-            <option value="1200">Special Blend 500g 1200yen</option>
+            <option value="500" data-name="Original blend 200g">Original blend 200g 500yen</option>
+            <option value="900" data-name="Original blend 500g">Original blend 500g 900yen</option>
+            <option value="700" data-name="Special Blend 200g">Special Blend 200g 700yen</option>
+            <option value="1200" data-name="Special Blend 500g">Special Blend 500g 1200yen</option>
           </select>
           <p>Please select quantity</p>
           <input type="number" min="1" max="5" id="number" required>
         </div>
         <br>
-        <input type="button" class="btn" value="Total amount" onclick="calc()">
+        <input type="button" class="btn" value="Add" onclick="addProduct()">    
+        <input type="button" class="btn" value="Total amount" onclick="calculateTotal()">
       </form>
     </section>
     <script type="text/javascript" src="javascripts/sale.js"></script>
