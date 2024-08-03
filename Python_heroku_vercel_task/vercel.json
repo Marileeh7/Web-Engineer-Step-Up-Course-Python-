@@ -1,0 +1,16 @@
+{
+    "build":[
+        "src": "Python_heroku_vercel_task/python_heroku_task/wsgi.py",
+        "use": "@versel/python",
+        "config": {
+            "maxLambdaSize": "15mb",
+            "runtime": "python3.12"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "Python_heroku_vercel_task/python_heroku_task/wsgi.py"
+        }
+    ]
+}
