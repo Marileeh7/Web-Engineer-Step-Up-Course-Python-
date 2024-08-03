@@ -1,7 +1,7 @@
 {
     "builds":[{
         "src": "python_heroku_task/wsgi.py",
-        "use": "@versel/python",
+        "use": "@vercel/python",
         "config": {
             "maxLambdaSize": "15mb",
             "runtime": "python3.12"
